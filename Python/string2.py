@@ -1,0 +1,29 @@
+#In python, strings can be stored in Double Quotes/Single Quotes 
+nameDQ = "Basha DQ" 
+print(type(nameDQ)) 
+ 
+nameSQ = 'Basha SQ' 
+print(type(nameSQ)) 
+ 
+ 
+#Access string content 
+name = 'Basha DS' 
+print(name[0]) 
+ 
+ 
+#slicing 
+print(name[0:5]) 
+
+#Modify string content 
+name = name + 'xyz' #You can concatinate 
+print(name) 
+
+ 
+#Replace function 
+name = name.replace(name, name.upper()) 
+print(name) 
+ 
+ 
+#instance: Check for instance comparision 
+isinstance(name, str)  
+isinstance(name, int)  
