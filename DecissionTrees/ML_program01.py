@@ -21,7 +21,7 @@ dt.fit(X_titanic_train, y_titanic_train)
  
 #Predict the outcome using decision tree 
 #Read the Test Data 
-titanic_test = pd.read_csv("D:C:/Data/titanic/test.csv") 
+titanic_test = pd.read_csv("C:/Data/titanic/test.csv") 
 X_test = titanic_test[['Pclass', 'SibSp', 'Parch']] 
 #Use .predict method on Test data using the model which we built 
 titanic_test['Survived'] = dt.predict(X_test)
