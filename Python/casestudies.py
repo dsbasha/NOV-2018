@@ -1,4 +1,4 @@
-# 1st case study
+# Case study 1
 x = input("Enter the number: ")
 print(x)
 
@@ -9,7 +9,7 @@ elif int(x)<0:
 else:
     print("Zero") 
     
-#2 case study
+# Case study 2
  x = input("Enter the number: ")
 print(x)
 
@@ -18,7 +18,7 @@ if int(x)%2 == 0:
 else:
     print(x+ " is Odd Number")
     
- #3 case study
+ # Case study 3
 x = input("Enter the Year: ")
 
 while (len(x) <4):
@@ -29,7 +29,7 @@ if int(x)%400 ==0:
 else:
     print (x+ "is a not a leap year")
     
-# 4th Case study
+# Case study 5
 a = input("Enter the First Number: ")
 b = input("Enter the Second Number: ")
 c = input("Enter the Third Number: ")
@@ -67,13 +67,76 @@ print(month+ " Contains " +str(months[months.index(month)+1])+" Days")
 # Case study 6
 a = input("Enter the any Number: ")
 num = int(a)
-if num > 2:  
-    for i in range(2,num):  
-        if (num % i) == 0:  
-            print(num,"is not a prime number")  
-            print(i,"times",num//i,"is",num)  
-            break  
-        else:  
-            print(num,"is a prime number")      
+isPrime = True
+for i in range(2,num):
+    if num%i == 0:
+        isPrime = False
+if isPrime:
+    print(num, "is a Prime Number")
+else:
+    print(num, "is not a Prime Number")
+
+#Print Primes from Range
+primelist =[]
+for posibleprime in range(2,22):
+    isPrime = True
+    for num in range(2,posibleprime):
+        if posibleprime%num == 0:
+            isPrime = False
+    if isPrime:
+        primelist.append(posibleprime)
+print(primelist)
+           
+#Case Study 7
+n=int(input("Enter number:"))
+fact=1
+while(n>0):
+    fact=fact*n
+    n=n-1
+print("Factorial of the number is: ")
+print(fact)
+
+#Case Study 8
+num = int(input("Enter the number to show multiplication table of"))  
+# using for loop to iterate multiplication 10 times   
+for i in range(1,11):  
+   print(num,'x',i,'=',num*i) 
+
+#Case Study 9
+fibonacci = int(input("Enter the number for Fibonacci Sequence "))  
+
+if fibonacci <= 0:  
+    fibonacci = int(input("Please Enter the Positive number "))
+
+n1 = 0  
+n2 = 1  
+count = 2
+
+if fibonacci == 1:  
+   print("Fibonacci sequence:")  
+   print(n1) 
+    
 else:  
-    print(num,"is a prime number")  
+    print("Fibonacci sequence:")  
+    print(n1)
+    print(n2)  
+    while count < fibonacci:  
+        nxt = n1 + n2  
+        print(nxt)  
+       # update values  
+        n1 = n2  
+        n2 = nxt  
+        count += 1
+           
+ #Case Study 10
+num = int(input("Enter the number: "))
+temp = num
+tot = 0
+if num <= 0: 
+    print("Enter a whole positive number!") 
+else: 
+    while num > 0:
+        tot = tot + num
+        num = num - 1;
+    # displaying output
+    print("Sum of first", temp, "natural numbers is: ", tot)
