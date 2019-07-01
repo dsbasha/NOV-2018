@@ -14,3 +14,9 @@ len(list1)
 
 # dir gives attributes and functions of perticular object i.e list, touple, srt, int etc.
 print(dir(list1))
+
+#Actually copying list
+actual_bu = list1.copy()
+print(actual_bu)
+list1.pop()
+print(list1)
